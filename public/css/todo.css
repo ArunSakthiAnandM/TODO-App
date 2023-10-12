@@ -1,0 +1,88 @@
+:root {
+  --background-overall: rgb(226, 253, 255);
+  --background-main: rgb(134, 189, 194);
+}
+
+table {
+  width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+thead th {
+  background-color: rgb(86, 159, 167);
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(241, 254, 255);
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(199, 233, 236);
+}
+
+.pending-table .status-btn {
+  padding: 5px;
+  border: 2px solid var(--background-main);
+  border-radius: 100px;
+  background-color: var(--background-overall);
+}
+.pending-table .status-btn:hover {
+  cursor: pointer;
+  background-color: var(--background-main);
+}
+
+.completed-table .status-btn {
+  padding: 5px;
+  border: 2px solid var(--background-main);
+  border-radius: 100px;
+  background-color: var(--background-main);
+}
+.completed-table .status-btn:hover {
+  cursor: pointer;
+  background-color: var(--background-overall);
+}
+
+.new-task-form {
+  width: 800px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  row-gap: 3px;
+  column-gap: 3px;
+  padding: 3px;
+  border: 2px solid var(--background-main);
+  border-radius: 3px;
+  background-color: rgb(240, 254, 255);
+}
+input,
+select {
+  border: none;
+  padding: 5px 10px;
+  border: 2px solid var(--background-main);
+  background-color: var(--background-overall);
+}
+
+.input-form-button {
+  grid-column: 1 / -1;
+  border: 2px solid var(--background-main);
+  border-radius: 100px;
+  margin: 5px 200px;
+  padding: 3px;
+  background-color: var(--background-overall);
+}
+.input-form-button:hover {
+  background-color: var(--background-main);
+  cursor: pointer;
+}
+
+label {
+  text-align: center;
+}

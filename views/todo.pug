@@ -1,0 +1,48 @@
+extends base
+
+block content 
+  form.new-task-form(action="/user/todo" method="POST" target="_self")
+    label(for="name") Task Deatils
+    label(for="deadline") Deadline
+    label(for="priority") priority
+    input(type="text" placeholder="task..." required="true" name="text") 
+    input(type="date" placeholder="deadline..." required="true" name="deadline") 
+    select(placeholder="" required="true" name="priority")
+      option(value="") Select
+      option(value="1") 1 
+      option(value="2") 2
+      option(value="3") 3
+    button(class="input-form-button" type="submit" value="Enroll") Add New Task
+  table.pending-table
+    thead
+      tr
+        th(style="width:60%") Pending Tasks
+        th(style="width:25%") Deadline
+        th(style="width:10%") Priority
+        th(style="width:5%") Status
+    tbody
+      each task in user.tasks
+        if !task.status
+          tr
+            td= `${task.text}`
+            td= `${task.deadline.toDateString()}`
+            td(style="text-align: center")= `${task.priority}`
+            td(style="text-align: center")
+              button.status-btn(id=`${task._id}`)
+
+  table.completed-table
+    thead
+      tr
+        th(style="width:60%") Completed Tasks
+        th(style="width:25%") Deadline
+        th(style="width:10%") Priority
+        th(style="width:5%") Status
+    tbody
+      each task in user.tasks
+        if task.status
+          tr
+            td= `${task.text}`
+            td= `${task.deadline.toDateString()}`
+            td(style="text-align: center")= `${task.priority}`
+            td(style="text-align: center")
+              button.status-btn(id=`${task._id}`)

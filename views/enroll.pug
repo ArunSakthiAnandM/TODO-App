@@ -1,0 +1,12 @@
+extends base
+
+block content 
+  form.login-enroll-form.enroll-form(action="/home/enroll" method="POST" target="_self")
+    input#userName(value="" class="form-input" type="text" placeholder="Please enter your Name..." name="userName")
+    input#email(class="form-input" type="email" placeholder="Please enter your Email ID..." name="email")
+    input#password(class="form-input" type="password" placeholder="Please enter your Password..." name="password")
+    input#passwordConfirm(class="form-input" type="password" placeholder="Please confrim your Password..." name="passwordConfirm")
+    input#mobileNumber(class="form-input" type="text" placeholder="Please enter your Mobile Number..." name="mobileNumber")
+    p Please enter your DOB
+    input#dob(class="form-input" type="date" placeholder="Please enter your DOB..." name="dob")
+    button(class="form-button" type="submit" value="Enroll") ENROLL

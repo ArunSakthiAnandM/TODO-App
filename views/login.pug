@@ -1,0 +1,7 @@
+extends base
+
+block content 
+  form.login-enroll-form.login-form
+    input#email.form-input(type="email", placeholder="Please enter your Email ID...", required)
+    input#password.form-input(type="password", placeholder="Please enter your Password...", required, minlength='8')
+    button.form-button(type="submit", value="Login") LOGIN

@@ -1,0 +1,11 @@
+header.header
+    h1 
+      a(href=`${user ? "/user/todo" : "/home"}`) TODO - App for all your needs
+    aside
+      if user
+        h2= `Hello ${user.userName.split(" ")[0]}!` 
+        .header-aside-link-container
+          a.profile-btn(href="/user/profile") Profile
+          a.logout-btn Logout
+      else 
+        h2 Hello User!

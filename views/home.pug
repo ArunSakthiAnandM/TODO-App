@@ -1,0 +1,12 @@
+extends base
+
+block content
+  .home-container
+    if user 
+      .login-enroll
+        a(href="/user/todo") HOME
+    else
+      p Please Login/Enroll to continue
+      .login-enroll
+        a(href="/home/login") LOGIN 
+        a(href="home/enroll") ENROLL 

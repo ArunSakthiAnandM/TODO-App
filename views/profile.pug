@@ -1,0 +1,38 @@
+extends base
+
+block content 
+  //- form.user-container(action="/user/profile" method="POST")
+  form.user-container
+    label.user-property Name 
+    input.user-detail#userName(type="text" value=`${user.userName}` required name="userName")
+    label.user-property Email ID
+    input.user-detail#email(type="email" value=`${user.email}` required name="email")
+    label.user-property Mobile Number
+    input.user-detail#mobileNumber(type="text" value=`${user.mobileNumber}` required name="mobileNumber")
+    p.user-property Age
+    p.user-detail= `${new Date().getFullYear() - user.dob.getFullYear()}`
+    button.edit-profile(type="submit" value="Save") Save Changes
+
+  form.password-change(action="/user/profile" method="POST" target="_self")
+    label.user-property Current Password
+    input.user-detail(type="password" required name="password" autocomplete="off")
+    label.user-property New Password
+    input.user-detail(type="password" required name="password" autocomplete="off")
+    label.user-property Confrim New Password
+    input.user-detail(type="password" required name="passwordConfrim" autocomplete="off")
+    button.edit-profile(type="submit" value="Save") Change Password
+
+  div(class="slider")
+    div(class="slide")
+      p.premium-feature Add Free
+    div(class="slide")
+      p.premium-feature Access from multiple devices
+    div(class="slide")
+      p.premium-feature And many more
+    div(class="slide")
+      p.premium-feature Starts at just one rupee per month
+    button(class="slider__btn slider__btn--left") &larr;
+    button(class="slider__btn slider__btn--right") &rarr;
+    div(class="dots")
+
+  a.edit-profile Get Premium

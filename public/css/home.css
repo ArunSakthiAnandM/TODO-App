@@ -1,0 +1,40 @@
+:root {
+  --background-overall: rgb(226, 253, 255);
+  --background-main: rgb(134, 189, 194);
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-container p {
+  font-size: larger;
+}
+
+.login-enroll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-enroll a {
+  color: rgb(52, 46, 46);
+  font-size: 40px;
+  border: 3px solid var(--background-main);
+  border-radius: 200px;
+  padding: 10px 0px;
+  width: 250px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.login-enroll a:hover {
+  background-color: var(--background-main);
+}
